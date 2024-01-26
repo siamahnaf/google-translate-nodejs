@@ -1,0 +1,41 @@
+{
+  "name": "google-translate-nodejs",
+  "version": "1.0.1",
+  "description": "A nodejs package for translating text using google translate for free! It also support batching translation!",
+  "homepage": "https://github.com/siamahnaf/google-translate-nodejs",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf dist && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+  },
+  "author": {
+    "name": "Siam Ahnaf",
+    "email": "mail@siamahnaf.com",
+    "url": "https://www.siamahnaf.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "nodejs",
+    "gogle-translate",
+    "nodejs-google-translate-free",
+    "free-translation",
+    "google translation api",
+    "typescript",
+    "translation",
+    "language translation"
+  ],
+  "repository": {
+    "type": "git",
+    "directory": "https://github.com/siamahnaf/google-translate-nodejs",
+    "url": "https://github.com/siamahnaf/google-translate-nodejs"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.7",
+    "typescript": "^5.3.3"
+  }
+}
