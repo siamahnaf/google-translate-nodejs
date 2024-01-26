@@ -1,3 +1,3 @@
-import translate, { ResponseTypes } from "./translate";
+import translate, { BatchResponse, SingleResponse } from "./translate";
 
-export { translate, ResponseTypes };
+export { translate, BatchResponse, SingleResponse };
