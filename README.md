@@ -14,7 +14,8 @@ A Node.js package for translating text using Google Translate for free, with sup
 - Fast and lightweight
 - Batching translation. You can translate one text to many target language at a time.
 - No unnecessary Dependencies
-- Small in Size (12KB)
+- Now Multi translation is supported. You can translate a object into multiple languages
+- Small in Size (16KB)
 
 ## Installing
 
@@ -69,21 +70,21 @@ import { BatchResponse } from "google-translate-nodejs";
 ### translate.batch(text, targetLanguages, options)
 
 #### text
-Type: `String`
-Description: The main text which need to be translated
+- Type: `String`
+- Description: The main text which need to be translated
 
 #### targetLanuages
-Type: `String[]` `(String array)`
-Description: A array of string with lanuage code
+- Type: `String[]` `(String array)`
+- Description: A array of string with lanuage code
 
 #### options
-Type: `Object`
-Description: Options Object (Optional)
+- Type: `Object`
+- Description: Options Object (Optional)
 
 ##### from
-Type: `String`
-Description: From Language
-Default: `auto`
+- Type: `String`
+- Description: From Language
+- Default: `auto`
 
 
 ## Single Translation Example
@@ -109,21 +110,98 @@ import { SingleResponse } from "google-translate-nodejs";
 ### translate.single(text, targetLanguage, options)
 
 #### text
-Type: `String`
-Description: The main text which need to be translated
+- Type: `String`
+- Description: The main text which need to be translated
 
-#### targetLanuage
-Type: `String`
-Description: The target lanuage code
+#### targetLanguage
+- Type: `String`
+- Description: The target language code
 
 #### options
-Type: `Object`
-Description: Options Object (Optional)
+- Type: `Object`
+- Description: Options Object (Optional)
 
 ##### from
-Type: `String`
-Description: From Language
-Default: `auto`
+- Type: `String`
+- Description: From Language
+- Default: `auto`
+
+
+## Multi Translation Example
+
+```bash
+import { translate } from "google-translate-nodejs";
+const text = {
+  title: "How are you?",
+  description: "Here's a collection of news, notes, and highlights from Wednesday's on-field action.",
+  otherText: "Other text"
+}
+const target = ["bn", "fr", "es", "ar", "de"]
+const { data } = await translate.multi(text, target);
+console.log(data);
+
+//And result will be printed like-
+{
+  source: { lan: 'auto' },
+  target: [
+    {
+      languageCode: 'bn',
+      title: 'আপনি কেমন আছেন?',
+      description: 'এখানে বুধবারের মাঠের অ্যাকশন থেকে খবর, নোট এবং হাইলাইটগুলির একটি সংগ্রহ রয়েছে৷',
+      otherText: 'অন্যান্য পাঠ্য'
+    },
+    {
+      languageCode: 'fr',
+      title: 'Comment vas-tu?',
+      description: "Voici une collection d'actualités, de notes et de faits saillants de l'action sur le terrain de mercredi.",
+      otherText: 'Autre texte'
+    },
+    {
+      languageCode: 'es',
+      title: '¿Cómo estás?',
+      description: 'Aquí hay una colección de noticias, notas y momentos destacados de la acción en el campo del miércoles.',
+      otherText: 'Otro texto'
+    },
+    {
+      languageCode: 'ar',
+      title: 'كيف حالك؟',
+      description: 'فيما يلي مجموعة من الأخبار والملاحظات والأحداث البارزة من الأحداث الميدانية يوم الأربعاء.',
+      otherText: 'نص آخر'
+    },
+    {
+      languageCode: 'de',
+      title: 'Wie geht es dir?',
+      description: 'Hier finden Sie eine Sammlung von Neuigkeiten, Notizen und Highlights vom Spielfeldeinsatz am Mittwoch.',
+      otherText: 'Anderer Text'
+    }
+  ]
+}
+
+//For typescript you can import Response Types also-
+import { MultiResponse } from "google-translate-nodejs";
+```
+
+## API For Single Translations-
+
+### translate.multi(textObject, targetLanguages, options)
+
+#### text
+- Type: `Object`
+- Description: The main text which need to be translated. It can be any object.
+
+#### targetLanguages
+- Type: `String[]`
+- Description: The target languages code. Array of string.
+
+#### options
+- Type: `Object`
+- Description: Options Object (Optional)
+
+##### from
+- Type: `String`
+- Description: From Language
+- Default: `auto`
+
 
 ## Issues or correction
 If you face any issues to any function, please let me know by creating a issue on github.

@@ -1,6 +1,6 @@
 {
   "name": "google-translate-nodejs",
-  "version": "1.1.5",
+  "version": "1.2.5",
   "description": "A nodejs package for translating text using google translate for free! It also support batching translation!",
   "homepage": "https://github.com/siamahnaf/google-translate-nodejs",
   "main": "dist/cjs/index.js",
