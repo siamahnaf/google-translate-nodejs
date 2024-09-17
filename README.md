@@ -9,6 +9,7 @@ A Node.js package for translating text using Google Translate for free, with sup
 
 <a href="https://www.buymeacoffee.com/siamahnaf" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
+
 ## Features
 
 - Fast and lightweight
