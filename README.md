@@ -1,4 +1,4 @@
-# google-translate-nodejs
+# Google Translate Nodejs
 A nodejs package for translating text using google translate for free! It also support batching translation!
 
 ## Introduction
