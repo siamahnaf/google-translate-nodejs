@@ -1,3 +1,9 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/siamahnaf/assets-kit/main/logo/logo-white.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/siamahnaf/assets-kit/main/logo/logo-black.png">
+  <img alt="Siam Ahnaf" src="https://raw.githubusercontent.com/siamahnaf/assets-kit/main/logo/logo-black.png" height="auto" width="240">
+</picture>
+
 # Google Translate Nodejs
 A nodejs package for translating text using google translate for free! It also support batching translation!
 
@@ -207,13 +213,18 @@ import { MultiResponse } from "google-translate-nodejs";
 ## Issues or correction
 If you face any issues to any function, please let me know by creating a issue on github.
 
-## Stay in touch
+## Connect with me
+<div style="display: flex; align-items: center; gap: 3px;">
+<a href="https://wa.me/8801611994403"><img src="https://raw.githubusercontent.com/siamahnaf/assets-kit/main/icons/whatsapp.png" width="40" height="40"></a>
+<a href="https://siamahnaf.com/" style="margin-right: 8px"><img src="https://raw.githubusercontent.com/siamahnaf/assets-kit/main/icons/web.png" width="40" height="40"></a>
+<a href="https://www.linkedin.com/in/siamahnaf/" style="margin-right: 8px"><img src="https://raw.githubusercontent.com/siamahnaf/assets-kit/main/icons/linkedin.png" width="40" height="40"></a>
+<a href="https://x.com/siamahnaf198" style="margin-right: 8px"><img src="https://raw.githubusercontent.com/siamahnaf/assets-kit/main/icons/x.png" width="40" height="40"></a>
+<a href="https://www.facebook.com/siamahnaf198/" style="margin-right: 8px"><img src="https://raw.githubusercontent.com/siamahnaf/assets-kit/main/icons/facebook.png" width="40" height="40"></a>
+<a href="https://t.me/siamahnaf198" style="margin-right: 8px"><img src="https://raw.githubusercontent.com/siamahnaf/assets-kit/main/icons/telegram.png" width="40" height="40"></a>
+<a href="https://www.npmjs.com/~siamahnaf" style="margin-right: 8px"><img src="https://raw.githubusercontent.com/siamahnaf/assets-kit/main/icons/npm.png" width="40" height="40"></a>
+</div>
 
-- Author - [Siam Ahnaf](https://www.siamahnaf.com/)
-- Website - [https://www.siamahnaf.com/](https://www.siamahnaf.com/)
-- Twitter - [https://twitter.com/siamahnaf198](https://twitter.com/siamahnaf198)
-- Github - [https://github.com/siamahnaf](https://github.com/siamahnaf)
 
-## License
+------------
 
-Released under [__MIT license__](https://opensource.org/licenses/MIT).
+<p align="center" color="red"><a href="https://www.siamahnaf.com/">www.siamahnaf.com</a></p>
